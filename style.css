@@ -1,108 +1,142 @@
 a {
 	text-decoration:none;
-	color : #0e8dbc;
+	color : #ffffff;
 }
 
 a:hover {
 	text-decoration:none;
-	color : #ffffff;
-}
-
-td {
-  border: 1px solid #0e8dbc;
-  padding: 3px 2px;
-  border-radius:10px;
-  margin :5px;
-  padding:5px;
-  width:200px;
-  color : #0e8dbc;
-  font-size:1.2em;
-  
-}
-
-td img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-td:hover {
-  border: 1px solid #0e8dbc;
-  padding: 3px 2px;
-  border-radius:5px;
-  margin :5px;
-  padding:5px;
-  width:200px;
-  background : #0e8dbc;
-  color : #ffffff;
-  font-size:1.2em;  
-}
-
-body{
-	text-align:center;
-	font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-
-h1 {
-color: #FFFFFF;
-background: #0e8dbc;
-text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-color: #FFFFFF;
-background: #0e8dbc;
-margin-left:40%;
-margin-right:40%;
-height:30%;
-border-radius:5px;
-padding:5px;
-
-}
-
-table {
-	border-collapse: separate;
-	border-spacing: 10px;
-}
-
-
-#pro {
-	color : #0e8dbc;
-	font-size:2em;
+	color : black;
 	font-style:bold;
 }
 
 
-p {
-	color : #0e8dbc;
-	font-size:1.2em;
-	font-style:bold;
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfbf6;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-#nav {
-	color : #0e8dbc;
-	font-size:1.5em;
-	font-style:bold;
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
 }
 
-#nav:hover {
-	color : #000000;
-	font-size:1.5em;
-	font-style:bold;
+/* Style de l'introduction */
+.notebook-spiral {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
 }
 
-#legende 
-{font-size:0.4em;}
+.square {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-.vide { border : 0px;
-		color : #0e8dbc;
-		font-size:1.2em;
-  }
-  
-.vide:hover { border : 0px;
-		color : #0e8dbc;
-		font-size:1.2em;
-		background : #0e8dbc;
-		color : #ffffff;
-  }
-  
-.no_fond {background : #ffffff;}
-.no_fond:hover {background : #ffffff;}
+.paper {
+    background-color: #f8f5e4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 400px;
+	padding-bottom : 60px;
+}
+
+.paper h1 {
+    font-size: 26px;
+}
+
+.paper p {
+    font-size: 14px;
+}
+
+/* Styles des cartes de projets */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    position: relative;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: rotate(2deg);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+}
+
+/* Styles des étoiles */
+.number {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: white;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles des numéros spécifiques */
+.circle-number {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.outlined-number {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: black;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Couleurs des cartes */
+.red { background-color: #ff6b6b; }
+.blue { background-color: #4a90e2; }
+.light-blue { background-color: #99c1ff; }
+.orange { background-color: #f5a623; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
